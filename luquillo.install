@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function luquillo_install() {
+  // Create the categories vocabulary.
+  $description = st('Use tags to group articles on similar topics into categories.');
+  $help = st('Enter a comma-separated list of words to describe your content.');
+  $vocabulary = (object) array(
+    'name' => st('Categories'),
+    'description' => $description,
+    'machine_name' => 'categories',
+    'help' => $help,
+
+  );
+  taxonomy_vocabulary_save($vocabulary);
+}
