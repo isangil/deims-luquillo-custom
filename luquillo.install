@@ -4,15 +4,52 @@
  * Implements hook_install().
  */
 function luquillo_install() {
-  // Create the categories vocabulary.
-  $description = st('Use tags to group articles on similar topics into categories.');
+  // Create the Data Sets Vocabulary V vocabulary.
+  $description = st('Use tags to groups data sets into categories corresponding to the funding cycle LUQ V');
   $help = st('Enter a comma-separated list of words to describe your content.');
   $vocabulary = (object) array(
-    'name' => st('Categories'),
+    'name' => st('Data Sets Vocabulary V'),
     'description' => $description,
-    'machine_name' => 'categories',
+    'machine_name' => 'data_sets_vocabulary_v',
     'help' => $help,
 
   );
   taxonomy_vocabulary_save($vocabulary);
+  
+  // Create the LUQ LTER 2006 Classification vocabulary.
+  $description = st('Use tags to groups content according to the LUQ LTER 2006 classification');
+  $help = st('Enter a comma-separated list of words to describe your content.');
+  $vocabulary = (object) array(
+    'name' => st('LUQ LTER 2006 Classification'),
+    'description' => $description,
+    'machine_name' => 'luq_lter_2006_classification',
+    'help' => $help,
+
+  );
+  taxonomy_vocabulary_save($vocabulary);
+    
+  // Create the On Table 4.
+  $description = st('Use tags to groups content according to the On Table 4 Vocab');
+  $help = st('Enter a comma-separated list of words to describe your content.');
+  $vocabulary = (object) array(
+    'name' => st('On Table 4 Vocab'),
+    'description' => $description,
+    'machine_name' => 'on_table_4_vocab',
+    'help' => $help,
+
+  );
+  taxonomy_vocabulary_save($vocabulary);
+  
+  // Create the Program vocabulary
+  $description = st('Use tags to groups content according to Program Vocabulary');
+  $help = st('Enter a comma-separated list of words to describe your content.');
+  $vocabulary = (object) array(
+    'name' => st('Program'),
+    'description' => $description,
+    'machine_name' => 'program',
+    'help' => $help,
+
+  );
+  taxonomy_vocabulary_save($vocabulary);
+  
 }
