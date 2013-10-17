@@ -18,7 +18,7 @@ function luquillo_migrate_api() {
                 // @todo Make this vocabulary source ID automatic from the D6 database.
                 'source_vocabulary' => '5',
                 'destination_vocabulary' => 'datasets_vocabulary_v',
-                'group' => DEIMS_D6_MIGRATION_GROUP,
+                'group_name' => DEIMS_D6_MIGRATION_GROUP,
             ),
             'LuquilloTaxonomLuqLter2006Classification' => array(
                 'class_name' => 'DrupalTerm6Migration',
@@ -28,7 +28,7 @@ function luquillo_migrate_api() {
                 // @todo Make this vocabulary source ID automatic from the D6 database.
                 'source_vocabulary' => '9',
                 'destination_vocabulary' => 'luq_lter_2006_classification',
-                'group' => DEIMS_D6_MIGRATION_GROUP,
+                'group_name' => DEIMS_D6_MIGRATION_GROUP,
             ),
             'LuquilloTaxonomyOnTable4Vocab' => array(
                 'class_name' => 'DrupalTerm6Migration',
@@ -38,7 +38,7 @@ function luquillo_migrate_api() {
                 // @todo Make this vocabulary source ID automatic from the D6 database.
                 'source_vocabulary' => '10',
                 'destination_vocabulary' => 'on_table_4_vocab',
-                'group' => DEIMS_D6_MIGRATION_GROUP,
+                'group_name' => DEIMS_D6_MIGRATION_GROUP,
             ),
             'LuquilloTaxonomyProgram' => array(
                 'class_name' => 'DrupalTerm6Migration',
@@ -48,7 +48,7 @@ function luquillo_migrate_api() {
                 // @todo Make this vocabulary source ID automatic from the D6 database.
                 'source_vocabulary' => '15',
                 'destination_vocabulary' => 'program',
-                'group' => DEIMS_D6_MIGRATION_GROUP,
+                'group_name' => DEIMS_D6_MIGRATION_GROUP,
             ),
         ),
     );
