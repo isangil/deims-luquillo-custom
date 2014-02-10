@@ -16,6 +16,7 @@ class LuquilloContentDataFileMigration extends DeimsContentDataFileMigration {
     // The Luquillo has several fields w/ non-standard machine names, tweaks here.
     $this->removeFieldMapping('field_date_range');
     $this->addFieldMapping('field_date_range','field_datafile_date');
+    $this->removeFieldMapping('field_date_range:to');
     $this->addFieldMapping('field_date_range:to', 'field_datafile_date:value2');
 
     // we have no instrumentation SOURCES
@@ -33,13 +34,17 @@ class LuquilloContentDataFileMigration extends DeimsContentDataFileMigration {
       ->description('Luq. methods handled in prepareRow');
 
     $this->removeFieldMapping('field_quality');
-    $this->addFieldMapping('field_quality','field_quality_control')
 
-    // note vocab is 12, will need to see what's with origin migration
-    $this->addFieldMapping('field_core_areas', '12')
-      ->sourceMigration('DeimsTaxonomyCoreAreas');
-    $this->addFieldMapping('field_core_areas:source_type')
-      ->defaultValue('tid');
+    $this->addFieldMapping('field_quality','field_quality_control');
+/**
+ *   for now, let us ignore this tagging.
+ *
+ *   // note vocab is 12, will need to see what's with origin migration
+ *   $this->addFieldMapping('field_core_areas', '12')
+ *     ->sourceMigration('DeimsTaxonomyCoreAreas');
+ *   $this->addFieldMapping('field_core_areas:source_type')
+ *     ->defaultValue('tid');
+ **/
   }
 
   public function prepareRow($row) {
@@ -47,7 +52,7 @@ class LuquilloContentDataFileMigration extends DeimsContentDataFileMigration {
     parent::prepareRow($row);
     // Concatenate Methods-description and methods-sampling in LUQ
 
-   if (!empty($row->field_sampling_description)) {
+   if (!empty($row->field_sampling_description[0]['value'])) {
      $row->field_methods = $row->field_methods_description . ' <p /> Sampling Description:<p/>'.$row->field_sampling_description;
    }else{
      $row->field_methods = $row->field_methods_description;
