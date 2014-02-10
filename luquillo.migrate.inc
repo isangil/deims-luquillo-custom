@@ -17,7 +17,7 @@ function luquillo_migrate_api() {
                 'source_version' => 6,
                 // @todo Make this vocabulary source ID automatic from the D6 database.
                 'source_vocabulary' => '5',
-                'destination_vocabulary' => 'datasets_vocabulary_v',
+                'destination_vocabulary' => 'data_sets_vocabulary_v',
                 'group_name' => DEIMS_D6_MIGRATION_GROUP,
             ),
             'LuquilloTaxonomLuqLter2006Classification' => array(
