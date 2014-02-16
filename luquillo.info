@@ -3,6 +3,7 @@ description = Custom code and migrations specific to Luquillo.
 core = 7.x
 ;dependencies[] = deims
 files[] = migration/LuquilloContentBlogMigration.php
+files[] = migration/LuquilloContentSlideMigration.php
 files[] = migration/LuquilloContentDataFileMigration.php
 ;files[] = migration/LuquilloContentDataSetMigration.php
 ;files[] = migration/LuquilloContentPersonMigration.php

@@ -13,6 +13,9 @@ function luquillo_migrate_api() {
        'LuquilloContentBlog' => array(
          'class_name' => 'LuquilloContentBlogMigration',
        ),
+       'LuquilloContentSlide' => array(
+         'class_name' => 'LuquilloContentSlideMigration',
+       ),
        'LuquilloTaxonomyDataSetsVocabularyV' => array(
          'class_name' => 'DrupalTerm6Migration',
          'description' => "Taxonomy migration for the 'Data Sets Vocabulary V' vocabulary.",
