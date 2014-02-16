@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Luquillo Slide feature.
+ */
+
+include_once 'luquillo_slide.features.inc';
