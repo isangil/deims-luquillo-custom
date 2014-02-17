@@ -8,3 +8,4 @@ files[] = migration/LuquilloContentDataFileMigration.php
 ;files[] = migration/LuquilloContentDataSetMigration.php
 ;files[] = migration/LuquilloContentPersonMigration.php
 files[] = migration/LuquilloContentOrganizationMigration.php
+files[] = migration/LuquilloContentInstitutionMigration.php
