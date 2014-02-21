@@ -70,7 +70,7 @@ function luquillo_migrate_api() {
 function luquillo_deims_migration_overrides() {
     return array(
         'DeimsContentDataFile' => array('class_name' => 'LuquilloContentDataFileMigration'),
-//        'DeimsContentDataSet' => array('class_name' => 'LuquilloContentDataSetMigration'),
+        'DeimsContentDataSet' => array('class_name' => 'LuquilloContentDataSetMigration'),
 //        'DeimsContentPerson' => array('class_name' => 'LuquilloContentPersonMigration'),
         'DeimsContentOrganization' => array('class_name' => 'LuquilloContentOrganizationMigration'),
     );
