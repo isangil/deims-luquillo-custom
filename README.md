@@ -41,13 +41,13 @@ the side, and hit _Save_.
 If you prefer speed, use drush to enable the module(s). If you had, say, a GIS module..
 * `drush en luquillo luquillo_spatial_data`
 
-Some of this migrations required additions (spatial data) and changes to the Luquillo 
-DEIMS content types (research project). Ensure that those features changes are taking 
+Some of this migrations required additions (organization type) and changes to the Luquillo 
+DEIMS content types (data set). Ensure that those features changes are taking 
 effect, by deleting the existing feature and placing the overriden feature, or simply 
-moving the overriding DEIMS features (such as folder "deims_research_project") 
+moving the overriding DEIMS features (such as folder "deims-data-set") 
 into the DEIMS features folder. If you are in your Drupal root:
 
-* `mv sites/default/modules/luquillo/features/deims_research_project profiles/deims/modules/features`
+* `mv sites/default/modules/luquillo/features/deims_data_set profiles/deims/modules/features`
 
 
 ###  For the custom migrations to work ###
@@ -60,7 +60,7 @@ an example
 
 * `<?php `
 * ` $databases['drupal6']['default'] = array(`
-* `  'database' => 'deims-drupal6-sevilleta',`
+* `  'database' => 'deims-drupal6-luquillo',`
 * `  'username' => 'deims-mysql-user',`
 * `  'password' => 'deims-mysql-user-password',`
 * `  'host' => 'localhost',`
@@ -70,8 +70,18 @@ an example
 * ` );`
 
 
+###Other caveats:
+
+-You will need to visit Structure->Blocks, and place the disabled "view: front-page-slideshow" in the header area of the Deims Theme.
+
+-You may need to visit the core migrations at profiles/deims/modules/custom/deims-d6-migrate and modify the source vocabulary IDs for the core areas (vid=6) and LTER controlled (vid=8), in file luquillo.migrate.inc look for lines like
+* `'source_vocabulary' => '6',`
+
+
 For more documentation on this customizations visit the blogs at http://lno.lternet.edu/blog/6 
 and look for DEIMS Migrations
 
 For DEIMS help, visit the DEIMS project page at drupal.org, read the papers in databits.lternet.edu
 or contact us.
+
+
