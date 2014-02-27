@@ -63,17 +63,13 @@ class LuquilloContentPersonMigration extends DeimsContentPersonMigration {
     $this->addFieldMapping('field_person_coreareas_termref:source_type')
       ->defaultValue('tid');
 
+    // Integer for -view order- Luq 5 Researcher number (28 nodes)
+    $this->addFieldMapping('field_person_luq5researcher','field_person_luq5researche');
 
 /**
    //name related (suffix)
    field_person_prefix
    field_person_sufix	
-
-   //consolidate these two  
-   // we can deprecate the first one in favor of the second.
-   // the second field implies the first.
-   field_person_isluq5researcherfla	// LUQ LTER 5 Researcher? (Yes/No Boolean) 27 yes
-   field_person_luq5researche	        // Integer for -view order- Luq 5 Researcher number (28 nodes)
 
    field_gradstudform_advisor_ref	// node ref to SELF  ?tough?
 
