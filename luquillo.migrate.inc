@@ -69,9 +69,10 @@ function luquillo_migrate_api() {
  */
 function luquillo_deims_migration_overrides() {
     return array(
+        'DeimsContentOrganization' => array('class_name' => 'LuquilloContentOrganizationMigration'),
         'DeimsContentDataFile' => array('class_name' => 'LuquilloContentDataFileMigration'),
         'DeimsContentDataSet' => array('class_name' => 'LuquilloContentDataSetMigration'),
-//        'DeimsContentPerson' => array('class_name' => 'LuquilloContentPersonMigration'),
-        'DeimsContentOrganization' => array('class_name' => 'LuquilloContentOrganizationMigration'),
+        'DeimsContentPerson' => array('class_name' => 'LuquilloContentPersonMigration'),
+        'DeimsContentResearchSite' => array('class_name' => 'LuquilloContentResearchSiteMigration'),
     );
 }
