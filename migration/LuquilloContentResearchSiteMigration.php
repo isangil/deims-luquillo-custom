@@ -19,7 +19,7 @@ class LuquilloContentResearchSiteMigration extends DeimsContentResearchSiteMigra
        ->sourceMigration('DeimsFile');
 
      // VOcabulary Program reference, to a featurized new field
-     $this->addFieldMapping('field_res_site_program_termref', 'field_researchsite_program')
+     $this->addFieldMapping('field_res_site_program_ter', 'field_researchsite_program')
        ->sourceMigration('LuquilloTaxonomyProgram');
       
      // Datum is a overly used field, migrated to a newly featurized field.
@@ -34,7 +34,10 @@ class LuquilloContentResearchSiteMigration extends DeimsContentResearchSiteMigra
      $this->addFieldMapping('field_res_site_isareaflag','field_research_site_isareaflag')
       ->description('tweak in prepareRow.');
 
-     // References to other content types.
+     // area
+     $this->addFieldMapping('field_res_site_area','field_research_site_area');
+
+     // References to other content types. unsure about these.
      $this->addFieldMapping('field_res_site_datasource_ref','field_site_datafile_refr')
       ->sourceMigration('DeimsDataFile');
      $this->addFieldMapping('field_res_site_dataset_ref','field_site_dataset_reference')
