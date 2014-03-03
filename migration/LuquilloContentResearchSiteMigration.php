@@ -10,8 +10,8 @@ class LuquilloContentResearchSiteMigration extends DeimsContentResearchSiteMigra
      parent::__construct($arguments);
 
      $this->addUnmigratedSources(array(
-       field_research_site_locationcck,
-       field_site_image,
+       'field_research_site_locationcck',
+       'field_site_image',
      ));
 //   the photos use a different field
      $this->removeFieldMapping('field_images');
@@ -21,6 +21,8 @@ class LuquilloContentResearchSiteMigration extends DeimsContentResearchSiteMigra
      // VOcabulary Program reference, to a featurized new field
      $this->addFieldMapping('field_res_site_program_ter', 'field_researchsite_program')
        ->sourceMigration('LuquilloTaxonomyProgram');
+     $this->addFieldMapping('field_res_site_program_ter:source_type')
+       ->defaultValue('tid');
       
      // Datum is a overly used field, migrated to a newly featurized field.
      $this->addFieldMapping('field_res_site_datum','field_research_site_datum');
