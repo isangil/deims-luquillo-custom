@@ -42,7 +42,8 @@ class LuquilloContentPersonMigration extends DeimsContentPersonMigration {
     $this->addFieldMapping('field_url:attributes','field_person_url:attributes');
 
     //these two may not work.  re-register field (was unmmi) and picklist.
-    $this->addFieldMapping('field_name:given','field_person_first_name');
+//    $this->addFieldMapping('field_name:given','field_person_first_name');
+    $this->removeFieldMapping('field_name:generational');
     $this->addFieldMapping('field_name:generational','field_person_sufix');
 
     $this->addFieldMapping('field_images', 'field_persons_image')
