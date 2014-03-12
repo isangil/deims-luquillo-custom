@@ -4,6 +4,7 @@ core = 7.x
 ;dependencies[] = deims
 files[] = migration/LuquilloContentBlogMigration.php
 files[] = migration/LuquilloContentSlideMigration.php
+files[] = migration/LuquilloContentStoryMigration.php
 files[] = migration/LuquilloContentDataFileMigration.php
 files[] = migration/LuquilloContentDataSetMigration.php
 files[] = migration/LuquilloContentPersonMigration.php

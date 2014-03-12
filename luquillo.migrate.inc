@@ -74,5 +74,6 @@ function luquillo_deims_migration_overrides() {
         'DeimsContentDataSet' => array('class_name' => 'LuquilloContentDataSetMigration'),
         'DeimsContentPerson' => array('class_name' => 'LuquilloContentPersonMigration'),
         'DeimsContentResearchSite' => array('class_name' => 'LuquilloContentResearchSiteMigration'),
+        'DeimsContentStory' => array('class_name' => 'LuquilloContentStoryMigration'),
     );
 }
