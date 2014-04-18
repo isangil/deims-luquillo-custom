@@ -1,7 +1,7 @@
 name = Luquillo Slide
 description = A content type and slide show customize for Luquillo LTER 
 core = 7.x
-package = Features
+package = LUQ Features
 version = 7.x-1.0-dev
 project = luquillo_slide
 dependencies[] = features
