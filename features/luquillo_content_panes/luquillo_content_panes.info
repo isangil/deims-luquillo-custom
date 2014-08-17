@@ -1,0 +1,13 @@
+name = Luquillo Content Panes
+core = 7.x
+package = Luquillo Features
+dependencies[] = ctools
+dependencies[] = ctools_custom_content
+features[ctools][] = ctools_custom_content:ctools_content:1
+features[ctools_custom_content][] = blank_square
+features[ctools_custom_content][] = data_sets_metadata
+features[ctools_custom_content][] = link_list
+features[ctools_custom_content][] = main_menu_pages_panes
+features[ctools_custom_content][] = nodelinkforbasicpage
+features[ctools_custom_content][] = site_mission
+features[features_api][] = api:1

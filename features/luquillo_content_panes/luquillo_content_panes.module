@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Luquillo Content Panes feature.
+ */
+
+include_once 'luquillo_content_panes.features.inc';
