@@ -1,0 +1,14 @@
+name = Luquillo Panels Field Groups
+core = 7.x
+package = LUQ Features
+dependencies[] = ctools
+dependencies[] = field_group
+features[ctools][] = field_group:field_group:1
+features[features_api][] = api:1
+features[field_group][] = group_categories|node|data_set|datasetspanels
+features[field_group][] = group_dates|node|data_set|datasetspanels
+features[field_group][] = group_downloads|node|data_set|datasetspanels
+features[field_group][] = group_methodology|node|data_set|datasetspanels
+features[field_group][] = group_people|node|data_set|datasetspanels
+features[field_group][] = group_related|node|data_set|datasetspanels
+features[field_group][] = group_summary|node|data_set|datasetspanels

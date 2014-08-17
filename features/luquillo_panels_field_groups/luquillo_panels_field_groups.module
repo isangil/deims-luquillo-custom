@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Luquillo Panels Field Groups feature.
+ */
+
+include_once 'luquillo_panels_field_groups.features.inc';

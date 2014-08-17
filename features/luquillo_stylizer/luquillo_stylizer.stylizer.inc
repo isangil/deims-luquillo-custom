@@ -1,14 +1,66 @@
 <?php
 /**
  * @file
- * luquillo_panels.stylizer.inc
+ * luquillo_stylizer.stylizer.inc
  */
 
 /**
  * Implements hook_default_stylizer().
  */
-function luquillo_panels_default_stylizer() {
+function luquillo_stylizer_default_stylizer() {
   $export = array();
+
+  $style = new stdClass();
+  $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
+  $style->api_version = 1;
+  $style->name = 'a_rounded_corners_pane_for_metadata_attributes';
+  $style->admin_title = 'a rounded corners Pane for metadata attributes';
+  $style->admin_description = '';
+  $style->settings = array(
+    'name' => 'a_rounded_corners_pane_for_metadata_attributes',
+    'style_base' => 'pane_rounded_shadow',
+    'header_font' => array(
+      'font' => '',
+      'size' => 'large',
+      'letter_spacing' => '',
+      'word_spacing' => 'normal',
+      'decoration' => 'none',
+      'weight' => 'normal',
+      'style' => 'normal',
+      'variant' => 'normal',
+      'case' => '',
+      'alignment' => 'center',
+    ),
+    'text_font' => array(
+      'font' => '',
+      'size' => 'large',
+      'letter_spacing' => '0',
+      'word_spacing' => 'normal',
+      'decoration' => 'none',
+      'weight' => 'normal',
+      'style' => 'normal',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'center',
+    ),
+    'padding' => array(
+      'top' => '',
+      'right' => '',
+      'bottom' => '',
+      'left' => '',
+    ),
+    'header_border' => array(
+      'thickness' => '',
+      'style' => '',
+    ),
+    'palette' => array(
+      'background' => '#FFFFFF',
+      'text' => '#000000',
+      'header-text' => '#000000',
+      'header-border' => '#000000',
+    ),
+  );
+  $export['a_rounded_corners_pane_for_metadata_attributes'] = $style;
 
   $style = new stdClass();
   $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
@@ -85,7 +137,7 @@ function luquillo_panels_default_stylizer() {
     ),
     'header_font' => array(
       'font' => 'Georgia, Times New Roman, Times, serif',
-      'size' => 'medium',
+      'size' => 'large',
       'letter_spacing' => '',
       'word_spacing' => '',
       'decoration' => '',
@@ -93,11 +145,11 @@ function luquillo_panels_default_stylizer() {
       'style' => '',
       'variant' => '',
       'case' => '',
-      'alignment' => '',
+      'alignment' => 'center',
     ),
     'text_font' => array(
-      'font' => 'Georgia, Times New Roman, Times, serif',
-      'size' => 'medium',
+      'font' => '',
+      'size' => 'large',
       'letter_spacing' => '',
       'word_spacing' => '',
       'decoration' => '',
@@ -105,7 +157,7 @@ function luquillo_panels_default_stylizer() {
       'style' => '',
       'variant' => '',
       'case' => '',
-      'alignment' => '',
+      'alignment' => 'center',
     ),
     'padding' => array(
       'top' => '',
@@ -114,11 +166,97 @@ function luquillo_panels_default_stylizer() {
       'left' => '',
     ),
     'header_border' => array(
-      'thickness' => '',
+      'thickness' => 'none',
       'style' => '',
     ),
   );
   $export['home_pane_one'] = $style;
+
+  $style = new stdClass();
+  $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
+  $style->api_version = 1;
+  $style->name = 'home_region_panel_style';
+  $style->admin_title = 'home region panel style';
+  $style->admin_description = 'Justify Large font home_region_panel_style';
+  $style->settings = array(
+    'name' => 'home_region_panel_style',
+    'style_base' => 'region_rounded_shadow',
+    'palette' => array(
+      'background' => '#FFFFFF',
+      'text' => '#000000',
+    ),
+    'font' => array(
+      'font' => '',
+      'size' => 'large',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'justify',
+    ),
+    'padding' => array(
+      'top' => '',
+      'right' => '',
+      'bottom' => '',
+      'left' => '',
+    ),
+  );
+  $export['home_region_panel_style'] = $style;
+
+  $style = new stdClass();
+  $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
+  $style->api_version = 1;
+  $style->name = 'image_centered_pane';
+  $style->admin_title = 'image_centered_pane';
+  $style->admin_description = 'image_centered_pane';
+  $style->settings = array(
+    'name' => 'image_centered_pane',
+    'style_base' => 'pane_rounded_shadow',
+    'palette' => array(
+      'background' => '#FFFFFF',
+      'text' => '#000000',
+      'header-text' => '#000000',
+      'header-border' => '#000000',
+    ),
+    'header_font' => array(
+      'font' => '',
+      'size' => '',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'center',
+    ),
+    'text_font' => array(
+      'font' => '',
+      'size' => '',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'center',
+    ),
+    'padding' => array(
+      'top' => '',
+      'right' => '',
+      'bottom' => '',
+      'left' => '',
+    ),
+    'header_border' => array(
+      'thickness' => '2px',
+      'style' => 'solid',
+    ),
+  );
+  $export['image_centered_pane'] = $style;
 
   $style = new stdClass();
   $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
@@ -203,6 +341,51 @@ function luquillo_panels_default_stylizer() {
     'name' => 'left_side_only_plain_pane',
     'style_base' => 'region_plain_box',
     'font' => array(
+      'font' => 'Georgia, Times New Roman, Times, serif',
+      'size' => 'medium',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'left',
+    ),
+    'border' => array(
+      'thickness' => '1px',
+      'style' => 'outset',
+    ),
+    'padding' => array(
+      'top' => '1.0em',
+      'right' => '1.0em',
+      'bottom' => '1.0em',
+      'left' => '1.0em',
+    ),
+    'palette' => array(
+      'background' => '#FFFFFF',
+      'text' => '#000000',
+      'border' => '#000000',
+    ),
+  );
+  $export['left_side_only_plain_pane'] = $style;
+
+  $style = new stdClass();
+  $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
+  $style->api_version = 1;
+  $style->name = 'lightgreenroundtable';
+  $style->admin_title = 'lightgreenroundtable';
+  $style->admin_description = 'lightgreenroundtable';
+  $style->settings = array(
+    'name' => 'lightgreenroundtable',
+    'style_base' => 'pane_rounded_shadow',
+    'palette' => array(
+      'background' => '#bfab78',
+      'text' => '#000000',
+      'header-text' => '#000000',
+      'header-border' => '#000000',
+    ),
+    'header_font' => array(
       'font' => '',
       'size' => '',
       'letter_spacing' => '',
@@ -212,25 +395,32 @@ function luquillo_panels_default_stylizer() {
       'style' => '',
       'variant' => '',
       'case' => '',
-      'alignment' => '',
+      'alignment' => 'center',
     ),
-    'border' => array(
-      'thickness' => '1px',
-      'style' => 'inset',
+    'text_font' => array(
+      'font' => '',
+      'size' => '',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => 'none',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'center',
     ),
     'padding' => array(
-      'top' => '',
-      'right' => '',
-      'bottom' => '0.3em',
-      'left' => '0.25em',
+      'top' => '0.2em',
+      'right' => '0.2em',
+      'bottom' => '0.2em',
+      'left' => '0.2em',
     ),
-    'palette' => array(
-      'background' => '#FFFFFF',
-      'text' => '#000000',
-      'border' => '#000000',
+    'header_border' => array(
+      'thickness' => '1px',
+      'style' => 'solid',
     ),
   );
-  $export['left_side_only_plain_pane'] = $style;
+  $export['lightgreenroundtable'] = $style;
 
   $style = new stdClass();
   $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
@@ -341,7 +531,7 @@ function luquillo_panels_default_stylizer() {
     'font' => array(
       'font' => 'Georgia, Times New Roman, Times, serif',
       'size' => 'large',
-      'letter_spacing' => '',
+      'letter_spacing' => '-4px',
       'word_spacing' => '',
       'decoration' => '',
       'weight' => '',
@@ -374,7 +564,7 @@ function luquillo_panels_default_stylizer() {
     'style_base' => 'region_rounded_shadow',
     'font' => array(
       'font' => 'Georgia, Times New Roman, Times, serif',
-      'size' => 'large',
+      'size' => 'medium',
       'letter_spacing' => '',
       'word_spacing' => '',
       'decoration' => '',
@@ -382,7 +572,59 @@ function luquillo_panels_default_stylizer() {
       'style' => 'normal',
       'variant' => '',
       'case' => '',
-      'alignment' => '',
+      'alignment' => 'center',
+    ),
+    'padding' => array(
+      'top' => '0.5em',
+      'right' => '1.0em',
+      'bottom' => '1.0em',
+      'left' => '0.5em',
+    ),
+    'palette' => array(
+      'background' => '#c68e3b',
+      'text' => '#000000',
+    ),
+  );
+  $export['main_style'] = $style;
+
+  $style = new stdClass();
+  $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
+  $style->api_version = 1;
+  $style->name = 'overview_pane';
+  $style->admin_title = 'overview pane';
+  $style->admin_description = 'justified';
+  $style->settings = array(
+    'name' => 'overview_pane',
+    'style_base' => 'pane_rounded_shadow',
+    'palette' => array(
+      'background' => '#FFFFFF',
+      'text' => '#000000',
+      'header-text' => '#000000',
+      'header-border' => '#000000',
+    ),
+    'header_font' => array(
+      'font' => '',
+      'size' => 'large',
+      'letter_spacing' => '0',
+      'word_spacing' => '0.45em',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'left',
+    ),
+    'text_font' => array(
+      'font' => '',
+      'size' => 'large',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'justify',
     ),
     'padding' => array(
       'top' => '',
@@ -390,12 +632,12 @@ function luquillo_panels_default_stylizer() {
       'bottom' => '',
       'left' => '',
     ),
-    'palette' => array(
-      'background' => '#FFFFFF',
-      'text' => '#000000',
+    'header_border' => array(
+      'thickness' => 'none',
+      'style' => '',
     ),
   );
-  $export['main_style'] = $style;
+  $export['overview_pane'] = $style;
 
   $style = new stdClass();
   $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
@@ -474,7 +716,7 @@ function luquillo_panels_default_stylizer() {
       'style' => '',
       'variant' => '',
       'case' => '',
-      'alignment' => 'left',
+      'alignment' => 'center',
     ),
     'padding' => array(
       'top' => '0.05em',
@@ -488,6 +730,92 @@ function luquillo_panels_default_stylizer() {
     ),
   );
   $export['panelandpanerounded'] = $style;
+
+  $style = new stdClass();
+  $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
+  $style->api_version = 1;
+  $style->name = 'pointfivepaddingroundcorners';
+  $style->admin_title = 'pointfivepaddingroundcorners';
+  $style->admin_description = '';
+  $style->settings = array(
+    'name' => 'pointfivepaddingroundcorners',
+    'style_base' => 'region_rounded_shadow',
+    'palette' => array(
+      'background' => '#FFFFFF',
+      'text' => '#000000',
+    ),
+    'font' => array(
+      'font' => 'Georgia, Times New Roman, Times, serif',
+      'size' => 'medium',
+      'letter_spacing' => '0',
+      'word_spacing' => 'normal',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'center',
+    ),
+    'padding' => array(
+      'top' => '0.75em',
+      'right' => '0.75em',
+      'bottom' => '0.75em',
+      'left' => '0.75em',
+    ),
+  );
+  $export['pointfivepaddingroundcorners'] = $style;
+
+  $style = new stdClass();
+  $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
+  $style->api_version = 1;
+  $style->name = 'round_left';
+  $style->admin_title = '';
+  $style->admin_description = '';
+  $style->settings = array(
+    'name' => 'round_left',
+    'style_base' => 'pane_rounded_shadow',
+    'header_font' => array(
+      'font' => '',
+      'size' => '',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => 'center',
+    ),
+    'text_font' => array(
+      'font' => '',
+      'size' => '',
+      'letter_spacing' => '',
+      'word_spacing' => '',
+      'decoration' => '',
+      'weight' => '',
+      'style' => '',
+      'variant' => '',
+      'case' => '',
+      'alignment' => '',
+    ),
+    'padding' => array(
+      'top' => '',
+      'right' => '',
+      'bottom' => '',
+      'left' => '',
+    ),
+    'header_border' => array(
+      'thickness' => '5px',
+      'style' => 'dotted',
+    ),
+    'palette' => array(
+      'background' => '#FFFFFF',
+      'text' => '#000000',
+      'header-text' => '#000000',
+      'header-border' => '#000000',
+    ),
+  );
+  $export['round_left'] = $style;
 
   $style = new stdClass();
   $style->disabled = FALSE; /* Edit this to true to make a default style disabled initially */
@@ -506,21 +834,21 @@ function luquillo_panels_default_stylizer() {
       'decoration' => '',
       'weight' => '',
       'style' => '',
-      'variant' => '',
-      'case' => '',
-      'alignment' => '',
+      'variant' => 'normal',
+      'case' => 'capitalize',
+      'alignment' => 'center',
     ),
     'text_font' => array(
-      'font' => '',
-      'size' => '',
+      'font' => 'Georgia, Times New Roman, Times, serif',
+      'size' => 'large',
       'letter_spacing' => '',
       'word_spacing' => '',
-      'decoration' => '',
+      'decoration' => 'none',
       'weight' => '',
       'style' => '',
-      'variant' => '',
-      'case' => '',
-      'alignment' => '',
+      'variant' => 'normal',
+      'case' => 'capitalize',
+      'alignment' => 'center',
     ),
     'padding' => array(
       'top' => '0.05em',
@@ -533,7 +861,7 @@ function luquillo_panels_default_stylizer() {
       'style' => 'outset',
     ),
     'palette' => array(
-      'background' => '#FFFFFF',
+      'background' => '#c9905b',
       'text' => '#000000',
       'header-text' => '#000000',
       'header-border' => '#000000',

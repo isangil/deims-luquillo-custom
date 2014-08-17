@@ -1,0 +1,10 @@
+name = Luquillo Panels Layouts
+core = 7.x
+package = LUQ Features
+dependencies[] = ctools
+dependencies[] = panels
+features[ctools][] = panels:layouts:1
+features[features_api][] = api:1
+features[panels_layout][] = aboutlayout
+features[panels_layout][] = data_sets
+features[panels_layout][] = datasets
