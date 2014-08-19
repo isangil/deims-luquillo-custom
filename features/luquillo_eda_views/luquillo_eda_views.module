@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the luquillo_eda_views feature.
+ */
+
+include_once 'luquillo_eda_views.features.inc';
