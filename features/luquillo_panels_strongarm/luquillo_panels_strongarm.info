@@ -1,0 +1,14 @@
+name = luquillo_panels_strongarm
+core = 7.x
+package = LUQ Features
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = page_cache_maximum_age
+features[variable][] = page_compression
+features[variable][] = page_manager_node_edit_disabled
+features[variable][] = page_manager_node_view_disabled
+features[variable][] = panels_node_allowed_layouts
+features[variable][] = panels_node_default
+features[variable][] = panels_renderer_default
