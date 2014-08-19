@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the luquillo views panels feature.
+ */
+
+include_once 'luquillo_views_panels.features.inc';
