@@ -17,6 +17,8 @@ class LuquilloContentResearchSiteMigration extends DeimsContentResearchSiteMigra
      $this->removeFieldMapping('field_images');
      $this->addFieldMapping('field_images','field_research_site_image')
        ->sourceMigration('DeimsFile');
+//     $this->addFieldMapping('field_images:file_class')->defaultValue('MigrateFileFid');
+//     $this->addFieldMapping('field_images:preserve_files')->defaultValue(TRUE);
 
      // VOcabulary Program reference, to a featurized new field
      $this->addFieldMapping('field_res_site_program_ter', 'field_researchsite_program')
@@ -50,10 +52,10 @@ class LuquilloContentResearchSiteMigration extends DeimsContentResearchSiteMigra
     parent::prepareRow($row);
 
     switch ($row->field_research_site_isareaflag) {
-      case 'TRUE':
+      case 'Yes':
         $row->field_research_site_isareaflag = 1;
         break;
-      case 'FALSE':
+      case 'No':
         $row->field_research_site_isareaflag = 0;
         break;
       default:
