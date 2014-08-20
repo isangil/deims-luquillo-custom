@@ -55,12 +55,16 @@ function deims_research_project_field_group_info() {
       2 => 'field_project_director',
       3 => 'field_project_scientist',
     ),
-    'format_type' => 'htabs',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'Research Project Staff',
       'instance_settings' => array(
-        'classes' => 'group-project-staff field-group-htabs',
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-personnel field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_project_staff|node|project|form'] = $field_group;
