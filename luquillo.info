@@ -10,4 +10,5 @@ files[] = migration/LuquilloContentDataSetMigration.php
 files[] = migration/LuquilloContentPersonMigration.php
 files[] = migration/LuquilloContentOrganizationMigration.php
 files[] = migration/LuquilloContentInstitutionMigration.php
+files[] = migration/LuquilloContentResearchProjectMigration.php
 files[] = migration/LuquilloContentResearchSiteMigration.php
