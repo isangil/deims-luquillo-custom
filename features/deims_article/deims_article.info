@@ -48,4 +48,3 @@ features[variable][] = node_preview_article
 features[variable][] = node_submitted_article
 features[variable][] = pathauto_node_article_pattern
 features[variable][] = workbench_access_node_type_article
-features[views_view][] = key_finding_list
