@@ -73,13 +73,13 @@ class LuquilloContentResearchProjectMigration extends DeimsContentResearchProjec
        ->defaultValue('tid');
 
      //  9 luq-lter-2006-class
-     $this->addFieldMapping('field_rp_lter2006_classificati', '8')
+     $this->addFieldMapping('field_rp_lter2006_classificati', '9')
        ->sourceMigration('LuquilloTaxonomLuqLter2006Classification');
      $this->addFieldMapping('field_rp_lter2006_classificati:source_type')
        ->defaultValue('tid');
 
      //  10 on table 4 vocab
-     $this->addFieldMapping('field_rp_2006prop_table4_termref', '8')
+     $this->addFieldMapping('field_rp_2006prop_table4_termref', '15')
        ->sourceMigration('LuquilloTaxonomyOnTable4Vocab');
      $this->addFieldMapping('field_rp_2006prop_table4_termref:source_type')
        ->defaultValue('tid');
