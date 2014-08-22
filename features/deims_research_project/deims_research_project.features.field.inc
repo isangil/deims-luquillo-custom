@@ -53,7 +53,7 @@ function deims_research_project_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -206,7 +206,7 @@ function deims_research_project_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => 5,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -322,7 +322,7 @@ function deims_research_project_field_default_fields() {
           'track_list' => 0,
         ),
         'type' => 'term_reference_tree',
-        'weight' => '43',
+        'weight' => '44',
       ),
       'workbench_access_field' => 0,
     ),
@@ -406,7 +406,7 @@ function deims_research_project_field_default_fields() {
   $fields['node-project-field_images'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_images',
@@ -502,7 +502,7 @@ function deims_research_project_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '33',
+        'weight' => '4',
       ),
       'workbench_access_field' => 0,
     ),
@@ -557,7 +557,7 @@ function deims_research_project_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '8',
+          'weight' => 8,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -590,7 +590,7 @@ function deims_research_project_field_default_fields() {
           'track_list' => 1,
         ),
         'type' => 'term_reference_tree',
-        'weight' => '41',
+        'weight' => '42',
       ),
       'workbench_access_field' => 0,
     ),
@@ -664,7 +664,7 @@ function deims_research_project_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
-        'weight' => '9',
+        'weight' => '51',
       ),
       'workbench_access_field' => 0,
     ),
@@ -828,7 +828,7 @@ function deims_research_project_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '45',
+        'weight' => '52',
       ),
       'workbench_access_field' => 0,
     ),
@@ -925,7 +925,7 @@ function deims_research_project_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '46',
+        'weight' => '53',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1022,196 +1022,7 @@ function deims_research_project_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '47',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-project-field_project_scientist'.
-  $fields['node-project-field_project_scientist'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_project_scientist',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'node' => array(
-          'columns' => array(
-            'target_id' => 'nid',
-          ),
-          'table' => 'node',
-        ),
-      ),
-      'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'entityreference',
-      'settings' => array(
-        'delete_on_parent_delete' => '',
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'direction' => 'ASC',
-            'property' => 'title',
-            'type' => 'property',
-          ),
-          'target_bundles' => array(
-            'person' => 'person',
-          ),
-        ),
-        'target_type' => 'node',
-      ),
-      'translatable' => '0',
-      'type' => 'entityreference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'project',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => 1,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '15',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_project_scientist',
-      'label' => 'Project Scientist',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'inline_entity_form',
-        'settings' => array(
-          'fields' => array(),
-          'type_settings' => array(
-            'allow_existing' => 1,
-            'clone_button' => 0,
-            'delete_references' => 0,
-            'match_operator' => 'CONTAINS',
-          ),
-        ),
-        'type' => 'inline_entity_form',
-        'weight' => '48',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-project-field_project_type'.
-  $fields['node-project-field_project_type'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_project_type',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'project_type',
-            'parent' => '0',
-          ),
-        ),
-        'delete_on_parent_delete' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'project',
-      'default_value' => array(
-        0 => array(
-          'tid' => '1346',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 18,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'ds_extras_field_template' => '',
-      'entity_type' => 'node',
-      'field_name' => 'field_project_type',
-      'label' => 'Project Type',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'term_reference_tree',
-        'settings' => array(
-          'cascading_selection' => 0,
-          'filter_view' => '',
-          'leaves_only' => 0,
-          'max_depth' => '',
-          'parent_term_id' => '',
-          'search' => 0,
-          'select_parents' => 0,
-          'start_minimized' => 0,
-          'token_display' => '',
-          'track_list' => 0,
-        ),
-        'type' => 'term_reference_tree',
-        'weight' => '44',
+        'weight' => '54',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1299,7 +1110,7 @@ function deims_research_project_field_default_fields() {
           'track_list' => 1,
         ),
         'type' => 'term_reference_tree',
-        'weight' => '42',
+        'weight' => '43',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1399,7 +1210,7 @@ function deims_research_project_field_default_fields() {
           ),
         ),
         'type' => 'entityreference_autocomplete',
-        'weight' => '8',
+        'weight' => '49',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1484,8 +1295,270 @@ function deims_research_project_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '7',
+        'weight' => '48',
       ),
+    ),
+  );
+
+  // Exported field: 'node-project-field_related_people'.
+  $fields['node-project-field_related_people'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_related_people',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'delete_on_parent_delete' => '',
+        'handler' => 'views',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'view' => array(
+            'args' => array(),
+            'display_name' => 'entityreference_node_person',
+            'view_name' => 'entity_reference_selection',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 2,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_related_people',
+      'label' => 'Project Scientist',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'inline_entity_form',
+        'settings' => array(
+          'fields' => array(),
+          'type_settings' => array(
+            'allow_existing' => 1,
+            'clone_button' => 0,
+            'delete_references' => 0,
+            'match_operator' => 'CONTAINS',
+          ),
+        ),
+        'type' => 'inline_entity_form',
+        'weight' => '56',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'node-project-field_related_projects'.
+  $fields['node-project-field_related_projects'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_related_projects',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'project' => 'project',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 4,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_related_projects',
+      'label' => 'Related projects',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '52',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'node-project-field_research_project_type'.
+  $fields['node-project-field_research_project_type'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_research_project_type',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'USDA Forest Service' => 'USDA Forest Service',
+          'USDA Forest Service IITF' => 'USDA Forest Service IITF',
+          'LTREB STREAMS' => 'LTREB STREAMS',
+          'LUQ Investigator' => 'LUQ Investigator',
+          'LUQ Student' => 'LUQ Student',
+          'LUQ Scholyard' => 'LUQ Scholyard',
+          'LUQ Thesis (PhD)' => 'LUQ Thesis (PhD)',
+          'LUQ Thesis (Master)' => 'LUQ Thesis (Master)',
+          'Other' => 'Other',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'This is the program this project belongs to. Could be LTER or another. LUQ = Luquillo LTER',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 23,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_research_project_type',
+      'label' => 'Research Project Type',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'apply_chosen' => '',
+        ),
+        'type' => 'options_select',
+        'weight' => '5',
+      ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -1682,11 +1755,13 @@ function deims_research_project_field_default_fields() {
   t('Project Director');
   t('Project Manager');
   t('Project Scientist');
-  t('Project Type');
   t('Related Data Sets');
   t('Related links');
+  t('Related projects');
   t('Research Program');
+  t('Research Project Type');
   t('Researcher\'s Keywords');
+  t('This is the program this project belongs to. Could be LTER or another. LUQ = Luquillo LTER');
 
   return $fields;
 }

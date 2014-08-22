@@ -21,7 +21,7 @@ function deims_research_project_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Media',
-    'weight' => '44',
+    'weight' => '4',
     'children' => array(
       0 => 'field_images',
     ),
@@ -48,23 +48,22 @@ function deims_research_project_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Research Project Staff',
-    'weight' => '47',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_project_contact',
-      1 => 'field_project_manager',
+      0 => 'field_related_people',
+      1 => 'field_project_contact',
       2 => 'field_project_director',
-      3 => 'field_project_scientist',
+      3 => 'field_project_manager',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Research Project Staff',
+      'formatter' => '',
       'instance_settings' => array(
+        'classes' => 'group-project-staff field-group-htabs',
+        'description' => '',
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-personnel field-group-htab',
-        'description' => '',
       ),
-      'formatter' => 'closed',
     ),
   );
   $export['group_project_staff|node|project|form'] = $field_group;
@@ -80,11 +79,12 @@ function deims_research_project_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Related Information',
-    'weight' => '46',
+    'weight' => '6',
     'children' => array(
       0 => 'field_related_links',
-      1 => 'field_related_data_sets',
+      1 => 'field_related_projects',
       2 => 'field_luq_rp_research_categories',
+      3 => 'field_related_data_sets',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -109,12 +109,12 @@ function deims_research_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'group_media',
-      1 => 'group_related',
-      2 => 'group_taxonomy',
-      3 => 'group_project_staff',
+      1 => 'group_project_staff',
+      2 => 'group_related',
+      3 => 'group_taxonomy',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -137,15 +137,14 @@ function deims_research_project_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Taxonomy',
-    'weight' => '45',
+    'weight' => '5',
     'children' => array(
       0 => 'field_core_areas',
       1 => 'field_keywords',
       2 => 'field_dataset_program',
-      3 => 'field_project_type',
-      4 => 'field_reds_searcher_keywords',
-      5 => 'field_rp_2006prop_table4_termref',
-      6 => 'field_rp_lter2006_classificati',
+      3 => 'field_reds_searcher_keywords',
+      4 => 'field_rp_2006prop_table4_termref',
+      5 => 'field_rp_lter2006_classificati',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
