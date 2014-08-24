@@ -22,20 +22,25 @@ class LuquilloContentResearchProjectMigration extends DeimsContentResearchProjec
        'revision',
        'revision_uid',
        'log',
+       'daycount',
+       'timestamp',
+       'totalcount',
+       'field_research_project_sites',
+       'field_project_title',
+       'field_project_image:list',
      ));
 
      $this->addUnmigratedDestinations(array(
+       'field_abstract:language',
+       'field_abstract:format',
+       'field_images:language',
+       'field_images:alt',
+       'field_images:title',
        'field_funding_source:language',
        'field_funding_source:summary',
        'field_funding_source:format',
        'field_reds_searcher_keywords:create_term', 
        'field_reds_searcher_keywords:ignore_case',
-       'field_dataset_program:create_term', 
-       'field_dataset_program:ignore_case',
-       'field_project_type', 
-       'field_project_type:source_type',
-       'field_project_type:create_term', 
-       'field_project_type:ignore_case',
        'field_keywords:create_term', 
        'field_keywords:ignore_case',
        'field_core_areas:create_term', 
@@ -44,6 +49,14 @@ class LuquilloContentResearchProjectMigration extends DeimsContentResearchProjec
        'field_rp_2006prop_table4_termref:ignore_case',
        'field_rp_lter2006_classificati:create_term',
        'field_rp_lter2006_classificati:ignore_case',
+       'field_ongoing',
+       'field_related_links',
+       'field_related_links:title',
+       'field_related_links:attributes',
+       'field_related_links:language',
+       'field_related_projects',
+       'field_dataset_program:create_term',
+       'field_dataset_program:ignore_case',
      ));
 
 //   the photos use a different field
@@ -79,7 +92,7 @@ class LuquilloContentResearchProjectMigration extends DeimsContentResearchProjec
        ->defaultValue('tid');
 
      //  10 on table 4 vocab
-     $this->addFieldMapping('field_rp_2006prop_table4_termref', '15')
+     $this->addFieldMapping('field_rp_2006prop_table4_termref', '10')
        ->sourceMigration('LuquilloTaxonomyOnTable4Vocab');
      $this->addFieldMapping('field_rp_2006prop_table4_termref:source_type')
        ->defaultValue('tid');
@@ -88,7 +101,7 @@ class LuquilloContentResearchProjectMigration extends DeimsContentResearchProjec
      //  12 lter five core area codes  DNM
 
      //  15 program
-     $this->addFieldMapping('field_dataset_program', '8')
+     $this->addFieldMapping('field_dataset_program', '15')
        ->sourceMigration('LuquilloTaxonomyProgram');
      $this->addFieldMapping('field_dataset_program:source_type')
        ->defaultValue('tid');
@@ -102,7 +115,8 @@ class LuquilloContentResearchProjectMigration extends DeimsContentResearchProjec
      $this->addFieldMapping('field_luq_rp_research_categories','field_research_project_category');
 
      // perhaps try it in prepare...
-     // field_project_program	Research Program  -- OK, is this now a taxonomy???
+     // field_project_program	Research Project type, really.
+     $this->addFieldMapping('field_research_project_type','field_project_program');
 
      // References to other content types. unsure about these.
      // Luq2 is breaking down fast -- cannot add this field to source.
@@ -112,7 +126,7 @@ class LuquilloContentResearchProjectMigration extends DeimsContentResearchProjec
      $this->addFieldMapping('field_related_data_sets','field_research_project_data')
       ->sourceMigration('DeimsContentDataSet');
 
-     $this->addFieldMapping('field_project_scientist','field_research_project_invest')
+     $this->addFieldMapping('field_related_people','field_research_project_invest')
       ->sourceMigration('DeimsContentPerson');
     
   }
