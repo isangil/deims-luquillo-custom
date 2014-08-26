@@ -84,4 +84,6 @@ and look for DEIMS Migrations
 For DEIMS help, visit the DEIMS project page at drupal.org, read the papers in databits.lternet.edu
 or contact us.
 
+Keep an eye on the themes customizations, such as "color.inc" or "deims_theme.css".
+
 
