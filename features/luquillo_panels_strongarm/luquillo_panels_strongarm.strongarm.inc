@@ -13,30 +13,125 @@ function luquillo_panels_strongarm_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'page_cache_maximum_age';
+  $strongarm->name = 'additional_settings__active_tab_panel';
+  $strongarm->value = 'edit-custom-breadcrumbs';
+  $export['additional_settings__active_tab_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'autosave_panel';
+  $strongarm->value = 0;
+  $export['autosave_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_panel';
   $strongarm->value = '0';
-  $export['page_cache_maximum_age'] = $strongarm;
+  $export['auto_entitylabel_node_panel'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'page_compression';
+  $strongarm->name = 'auto_entitylabel_pattern_node_panel';
+  $strongarm->value = '';
+  $export['auto_entitylabel_pattern_node_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_panel';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'custom_breadcrumbs_show_form_table_panel';
   $strongarm->value = 1;
-  $export['page_compression'] = $strongarm;
+  $export['custom_breadcrumbs_show_form_table_panel'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'page_manager_node_edit_disabled';
-  $strongarm->value = TRUE;
-  $export['page_manager_node_edit_disabled'] = $strongarm;
+  $strongarm->name = 'diff_enable_revisions_page_node_panel';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_panel'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'page_manager_node_view_disabled';
-  $strongarm->value = FALSE;
-  $export['page_manager_node_view_disabled'] = $strongarm;
+  $strongarm->name = 'diff_show_preview_changes_node_panel';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_panel';
+  $strongarm->value = 'teaser';
+  $export['diff_view_mode_preview_node_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__panel';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_panel';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_panel';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_panel';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_panel';
+  $strongarm->value = '1';
+  $export['node_preview_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_panel';
+  $strongarm->value = 0;
+  $export['node_submitted_panel'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -71,6 +166,41 @@ function luquillo_panels_strongarm_strongarm() {
   $strongarm->name = 'panels_renderer_default';
   $strongarm->value = 'ipe';
   $export['panels_renderer_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_comment_panel';
+  $strongarm->value = 0;
+  $export['print_html_display_comment_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_panel';
+  $strongarm->value = 0;
+  $export['print_html_display_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_urllist_panel';
+  $strongarm->value = 0;
+  $export['print_html_display_urllist_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_panel';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_panel';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_panel'] = $strongarm;
 
   return $export;
 }
