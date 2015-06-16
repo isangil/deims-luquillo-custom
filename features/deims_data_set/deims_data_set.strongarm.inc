@@ -59,14 +59,38 @@ function deims_data_set_strongarm() {
       'bdp' => array(
         'custom_settings' => TRUE,
       ),
+      'iso' => array(
+        'custom_settings' => FALSE,
+      ),
+      'article_key_finding_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'main_menu_item_page' => array(
+        'custom_settings' => FALSE,
+      ),
+      'datasetspanels' => array(
+        'custom_settings' => TRUE,
+      ),
+      'map' => array(
+        'custom_settings' => FALSE,
+      ),
+      'data_source' => array(
+        'custom_settings' => FALSE,
+      ),
+      'variablelist' => array(
+        'custom_settings' => FALSE,
+      ),
+      'data_source_list' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '3',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
       ),
       'display' => array(),
@@ -137,7 +161,7 @@ function deims_data_set_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_data_set';
-  $strongarm->value = 'draft';
+  $strongarm->value = 'published';
   $export['workbench_moderation_default_state_data_set'] = $strongarm;
 
   return $export;

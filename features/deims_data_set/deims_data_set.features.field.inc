@@ -18,6 +18,9 @@ function deims_data_set_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_abstract',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -50,12 +53,21 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '12',
         ),
-        'default' => array(
+        'datasetspanels' => array(
           'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '9',
+          'weight' => '1',
+        ),
+        'default' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(
+            'trim_length' => 600,
+          ),
+          'type' => 'text_trimmed',
+          'weight' => '1',
         ),
         'eml' => array(
           'label' => 'above',
@@ -84,16 +96,17 @@ function deims_data_set_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_trimmed',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '1',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_abstract',
       'label' => 'Abstract',
@@ -109,8 +122,9 @@ function deims_data_set_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '5',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -157,12 +171,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '16',
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_plain',
+          'weight' => '2',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '11',
+          'type' => 'text_plain',
+          'weight' => '2',
         ),
         'eml' => array(
           'label' => 'above',
@@ -188,14 +209,14 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '13',
+          'weight' => '33',
         ),
         'teaser' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '11',
+          'weight' => '16',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -216,6 +237,7 @@ function deims_data_set_field_default_fields() {
         'type' => 'text_textarea',
         'weight' => '6',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -273,12 +295,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'taxonomy_bdp_keywordset',
           'weight' => '2',
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '5',
+        ),
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '10',
         ),
         'eml' => array(
           'label' => 'above',
@@ -308,7 +337,7 @@ function deims_data_set_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -384,12 +413,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_default',
           'weight' => '15',
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
+        ),
         'default' => array(
           'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '11',
+          'weight' => '5',
         ),
         'eml' => array(
           'label' => 'above',
@@ -416,14 +452,14 @@ function deims_data_set_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '4',
+          'weight' => '3',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -442,7 +478,7 @@ function deims_data_set_field_default_fields() {
           'size' => '10',
         ),
         'type' => 'text_textfield',
-        'weight' => '1',
+        'weight' => '4',
       ),
       'workbench_access_field' => 0,
     ),
@@ -475,7 +511,7 @@ function deims_data_set_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'delete_on_parent_delete' => 'if-unused',
+        'delete_on_parent_delete' => '',
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
@@ -511,15 +547,17 @@ function deims_data_set_field_default_fields() {
           'type' => 'entityreference_bdp_element',
           'weight' => '6',
         ),
+        'datasetspanels' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '16',
+        ),
         'default' => array(
-          'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'links' => 1,
-            'view_mode' => 'teaser',
-          ),
-          'type' => 'entityreference_entity_view',
-          'weight' => '6',
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '16',
         ),
         'eml' => array(
           'label' => 'above',
@@ -553,7 +591,7 @@ function deims_data_set_field_default_fields() {
             'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -562,7 +600,7 @@ function deims_data_set_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '7',
+          'weight' => '11',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -575,9 +613,12 @@ function deims_data_set_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'inline_entity_form',
+        'module' => 'entityreference',
         'settings' => array(
           'fields' => array(),
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => 60,
           'type_settings' => array(
             'allow_existing' => 0,
             'clone_button' => 1,
@@ -585,9 +626,10 @@ function deims_data_set_field_default_fields() {
             'match_operator' => 'CONTAINS',
           ),
         ),
-        'type' => 'inline_entity_form',
+        'type' => 'entityreference_autocomplete',
         'weight' => '8',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -641,12 +683,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '10',
+        ),
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '8',
+          'weight' => '14',
         ),
         'eml' => array(
           'label' => 'above',
@@ -664,13 +713,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '18',
         ),
       ),
       'entity_type' => 'node',
@@ -687,7 +736,242 @@ function deims_data_set_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
+        'weight' => '7',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'node-data_set-field_dataset_2015category'.
+  $fields['node-data_set-field_dataset_2015category'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_dataset_2015category',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => '2015dataproducts13_36',
+            'parent' => '0',
+          ),
+        ),
+        'delete_on_parent_delete' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'data_set',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'bdp' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
+        ),
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+        'eml' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'eml_hl' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_dataset_2015category',
+      'label' => '2015 Data Product Category',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'term_reference_tree',
+        'settings' => array(
+          'cascading_selection' => 0,
+          'filter_view' => '',
+          'leaves_only' => 0,
+          'max_depth' => '',
+          'parent_term_id' => '',
+          'search' => 0,
+          'select_parents' => 0,
+          'start_minimized' => 0,
+          'token_display' => '',
+          'track_list' => 0,
+        ),
+        'type' => 'term_reference_tree',
         'weight' => '6',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'node-data_set-field_dataset_duration'.
+  $fields['node-data_set-field_dataset_duration'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '2',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_dataset_duration',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'data_set',
+      'default_value' => array(
+        0 => array(
+          'value' => 'Long-Term',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'bdp' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'datasetspanels' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '24',
+        ),
+        'eml' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'eml_hl' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'module' => 'select_or_other',
+          'settings' => array(),
+          'type' => 'select_or_other_formatter',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_plain',
+          'weight' => '0',
+        ),
+      ),
+      'ds_extras_field_template' => 'theme_field',
+      'entity_type' => 'node',
+      'field_name' => 'field_dataset_duration',
+      'label' => 'Duration',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'select_or_other',
+        'settings' => array(
+          'available_options' => 'Long-Term
+Completed
+Ongoing',
+          'available_options_php' => '',
+          'markup_available_options_php' => '&lt;none&gt;',
+          'other' => 'Other',
+          'other_size' => '60',
+          'other_title' => '',
+          'other_unknown_defaults' => 'other',
+          'sort_options' => 0,
+        ),
+        'type' => 'select_or_other',
+        'weight' => '1',
       ),
       'workbench_access_field' => 0,
     ),
@@ -697,7 +981,7 @@ function deims_data_set_field_default_fields() {
   $fields['node-data_set-field_dataset_program'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_dataset_program',
@@ -743,12 +1027,22 @@ function deims_data_set_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'token_formatters',
+          'settings' => array(
+            'check_access' => TRUE,
+            'link' => 'taxonomy/term/[term:tid]',
+            'text' => '[term:name]',
+          ),
+          'type' => 'token_formatters_term_reference',
+          'weight' => '7',
+        ),
         'default' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '9',
+          'type' => 'hidden',
+          'weight' => '18',
         ),
         'eml' => array(
           'label' => 'above',
@@ -763,16 +1057,16 @@ function deims_data_set_field_default_fields() {
           'weight' => 0,
         ),
         'search_result' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '17',
         ),
       ),
       'entity_type' => 'node',
@@ -784,8 +1078,9 @@ function deims_data_set_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'term_reference_tree',
+        'module' => 'options',
         'settings' => array(
+          'apply_chosen' => 0,
           'cascading_selection' => 0,
           'filter_view' => '',
           'leaves_only' => 0,
@@ -797,8 +1092,8 @@ function deims_data_set_field_default_fields() {
           'token_display' => '',
           'track_list' => 0,
         ),
-        'type' => 'term_reference_tree',
-        'weight' => '8',
+        'type' => 'options_select',
+        'weight' => '9',
       ),
       'workbench_access_field' => 0,
     ),
@@ -854,12 +1149,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '8',
+        ),
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '7',
+          'weight' => '13',
         ),
         'eml' => array(
           'label' => 'above',
@@ -877,13 +1179,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '19',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '20',
         ),
       ),
       'entity_type' => 'node',
@@ -900,7 +1202,7 @@ function deims_data_set_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '8',
       ),
       'workbench_access_field' => 0,
     ),
@@ -951,17 +1253,17 @@ function deims_data_set_field_default_fields() {
           'type' => 'date_bdp_temporalCoverage',
           'weight' => '17',
         ),
+        'datasetspanels' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '10',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'date',
-          'settings' => array(
-            'format_type' => 'long',
-            'fromto' => 'both',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-          ),
-          'type' => 'date_default',
+          'settings' => array(),
+          'type' => 'date_plain',
           'weight' => '13',
         ),
         'eml' => array(
@@ -980,21 +1282,15 @@ function deims_data_set_field_default_fields() {
         'search_result' => array(
           'label' => 'inline',
           'module' => 'date',
-          'settings' => array(
-            'format_type' => 'long',
-            'fromto' => 'both',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-          ),
-          'type' => 'date_default',
-          'weight' => '5',
+          'settings' => array(),
+          'type' => 'date_plain',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '32',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -1021,7 +1317,7 @@ function deims_data_set_field_default_fields() {
           'text_parts' => array(),
           'year_range' => '1900:+10',
         ),
-        'type' => 'date_popup',
+        'type' => 'date_text',
         'weight' => '4',
       ),
       'workbench_access_field' => 0,
@@ -1073,12 +1369,18 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '14',
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'select_or_other',
+          'settings' => array(),
+          'type' => 'select_or_other_formatter',
+          'weight' => '5',
+        ),
         'default' => array(
           'label' => 'inline',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '10',
+          'type' => 'hidden',
+          'weight' => '17',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1097,13 +1399,13 @@ function deims_data_set_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '27',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -1122,7 +1424,7 @@ function deims_data_set_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '80',
+        'weight' => '13',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1173,11 +1475,17 @@ function deims_data_set_field_default_fields() {
           'type' => 'select_or_other_formatter',
           'weight' => '32',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
+        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '17',
+          'weight' => '22',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1195,13 +1503,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '26',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '26',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -1220,7 +1528,7 @@ function deims_data_set_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '77',
+        'weight' => '10',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1262,12 +1570,18 @@ function deims_data_set_field_default_fields() {
           'type' => 'token_field_default',
           'weight' => '30',
         ),
-        'default' => array(
+        'datasetspanels' => array(
           'label' => 'inline',
           'module' => 'token_field',
           'settings' => array(),
           'type' => 'token_field_default',
-          'weight' => '7',
+          'weight' => '12',
+        ),
+        'default' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '1',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1286,13 +1600,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '19',
+          'weight' => '38',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '25',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -1308,7 +1622,7 @@ function deims_data_set_field_default_fields() {
         'module' => 'token_field',
         'settings' => array(),
         'type' => 'token_field',
-        'weight' => '79',
+        'weight' => '12',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1355,11 +1669,17 @@ function deims_data_set_field_default_fields() {
           'type' => 'number_integer',
           'weight' => '31',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '10',
+        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '16',
+          'weight' => '21',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1383,13 +1703,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '24',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '28',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -1409,7 +1729,7 @@ function deims_data_set_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '76',
+        'weight' => '9',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1458,11 +1778,17 @@ function deims_data_set_field_default_fields() {
           'type' => 'list_key',
           'weight' => '33',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
+        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '18',
+          'weight' => '23',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1480,13 +1806,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '22',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '29',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -1504,7 +1830,7 @@ function deims_data_set_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
-        'weight' => '78',
+        'weight' => '11',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1518,6 +1844,9 @@ function deims_data_set_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_instrumentation',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -1550,6 +1879,13 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '10',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '12',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
@@ -1581,16 +1917,17 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '18',
+          'weight' => '37',
         ),
         'teaser' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '8',
+          'weight' => '13',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_instrumentation',
       'label' => 'Instrumentation',
@@ -1608,6 +1945,7 @@ function deims_data_set_field_default_fields() {
         'type' => 'text_textarea',
         'weight' => '60',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -1665,12 +2003,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'taxonomy_bdp_keywordset',
           'weight' => '4',
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '7',
+        ),
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
+          'weight' => '12',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1700,42 +2045,32 @@ function deims_data_set_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '7',
         ),
       ),
       'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_keywords',
-      'label' => 'Keywords',
+      'label' => 'LTER Keywords',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'term_reference_tree',
-        'settings' => array(
-          'cascading_selection' => 0,
-          'filter_view' => '',
-          'leaves_only' => 0,
-          'max_depth' => '',
-          'parent_term_id' => '',
-          'search' => 1,
-          'select_parents' => 0,
-          'start_minimized' => 1,
-          'token_display' => '',
-          'track_list' => 1,
-        ),
-        'type' => 'term_reference_tree',
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
         'weight' => '4',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -1782,6 +2117,13 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '11',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '14',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
@@ -1813,14 +2155,14 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '16',
+          'weight' => '35',
         ),
         'teaser' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '9',
+          'weight' => '14',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -1853,6 +2195,9 @@ function deims_data_set_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_methods',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -1885,6 +2230,13 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '8',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '11',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
@@ -1916,16 +2268,17 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '17',
+          'weight' => '36',
         ),
         'teaser' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '7',
+          'weight' => '12',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_methods',
       'label' => 'Methods',
@@ -1942,6 +2295,100 @@ function deims_data_set_field_default_fields() {
         ),
         'type' => 'text_textarea',
         'weight' => '58',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'node-data_set-field_numeric_data_set_id'.
+  $fields['node-data_set-field_numeric_data_set_id'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_numeric_data_set_id',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'data_set',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'bdp' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'datasetspanels' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
+        ),
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '19',
+        ),
+        'eml' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'eml_hl' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '17',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '22',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_numeric_data_set_id',
+      'label' => 'Numeric Data Set ID',
+      'required' => FALSE,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'number',
+        'settings' => array(
+          'available_options' => '',
+          'available_options_php' => '',
+          'markup_available_options_php' => '&lt;none&gt;',
+          'other' => 'Other',
+          'other_size' => 60,
+          'other_title' => '',
+          'other_unknown_defaults' => 'other',
+        ),
+        'type' => 'number',
+        'weight' => '2',
       ),
     ),
   );
@@ -1974,17 +2421,18 @@ function deims_data_set_field_default_fields() {
       'module' => 'entityreference',
       'settings' => array(
         'delete_on_parent_delete' => '',
-        'handler' => 'views',
+        'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
             'views-select-list' => array(
               'status' => 0,
             ),
           ),
-          'view' => array(
-            'args' => array(),
-            'display_name' => 'entityreference_node_person_and_organization',
-            'view_name' => 'entity_reference_selection',
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'person' => 'person',
           ),
         ),
         'target_type' => 'node',
@@ -2007,6 +2455,17 @@ function deims_data_set_field_default_fields() {
           ),
           'type' => 'entityreference_bdp_element',
           'weight' => '20',
+        ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'token_formatters',
+          'settings' => array(
+            'check_access' => TRUE,
+            'link' => '[entity:url]',
+            'text' => '[entity:label]',
+          ),
+          'type' => 'token_formatters_entity_reference',
+          'weight' => '14',
         ),
         'default' => array(
           'label' => 'above',
@@ -2039,13 +2498,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '30',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '31',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -2079,7 +2538,7 @@ function deims_data_set_field_default_fields() {
   $fields['node-data_set-field_person_creator'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_person_creator',
@@ -2103,17 +2562,18 @@ function deims_data_set_field_default_fields() {
       'module' => 'entityreference',
       'settings' => array(
         'delete_on_parent_delete' => '',
-        'handler' => 'views',
+        'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
             'views-select-list' => array(
               'status' => 0,
             ),
           ),
-          'view' => array(
-            'args' => array(),
-            'display_name' => 'entityreference_node_person_and_organization',
-            'view_name' => 'entity_reference_selection',
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'person' => 'person',
           ),
         ),
         'target_type' => 'node',
@@ -2135,6 +2595,17 @@ function deims_data_set_field_default_fields() {
           ),
           'type' => 'entityreference_label',
           'weight' => '19',
+        ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'token_formatters',
+          'settings' => array(
+            'check_access' => TRUE,
+            'link' => '[entity:url]',
+            'text' => '[entity:label]',
+          ),
+          'type' => 'token_formatters_entity_reference',
+          'weight' => '12',
         ),
         'default' => array(
           'label' => 'above',
@@ -2167,13 +2638,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '29',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '30',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -2265,11 +2736,22 @@ function deims_data_set_field_default_fields() {
           'type' => 'entityreference_bdp_element',
           'weight' => '21',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'token_formatters',
+          'settings' => array(
+            'check_access' => TRUE,
+            'link' => '[entity:url]',
+            'text' => '[entity:label]',
+          ),
+          'type' => 'token_formatters_entity_reference',
+          'weight' => '16',
+        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '14',
+          'weight' => '20',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2291,13 +2773,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '20',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '24',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -2388,11 +2870,22 @@ function deims_data_set_field_default_fields() {
           'type' => 'entityreference_label',
           'weight' => '22',
         ),
-        'default' => array(
+        'datasetspanels' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '15',
+          'weight' => '9',
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'token_formatters',
+          'settings' => array(
+            'check_access' => TRUE,
+            'link' => '[entity:url]',
+            'text' => '[entity:label]',
+          ),
+          'type' => 'token_formatters_entity_reference',
+          'weight' => '2',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2414,13 +2907,13 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '21',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '23',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -2461,7 +2954,14 @@ function deims_data_set_field_default_fields() {
       'field_permissions' => array(
         'type' => '0',
       ),
-      'foreign keys' => array(),
+      'foreign keys' => array(
+        'eck_project_role' => array(
+          'columns' => array(
+            'target_id' => 'id',
+          ),
+          'table' => 'eck_project_role',
+        ),
+      ),
       'indexes' => array(
         'target_id' => array(
           0 => 'target_id',
@@ -2475,13 +2975,15 @@ function deims_data_set_field_default_fields() {
         'handler_settings' => array(
           'behaviors' => array(
             'views-select-list' => array(
-              'status' => 0,
+              'status' => 1,
             ),
           ),
           'sort' => array(
             'type' => 'none',
           ),
-          'target_bundles' => array(),
+          'target_bundles' => array(
+            'project_role' => 'project_role',
+          ),
         ),
         'target_type' => 'project_role',
       ),
@@ -2503,6 +3005,16 @@ function deims_data_set_field_default_fields() {
           ),
           'type' => 'entityreference_entity_view',
           'weight' => '0',
+        ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'links' => 1,
+            'view_mode' => 'teaser',
+          ),
+          'type' => 'entityreference_entity_view',
+          'weight' => '15',
         ),
         'default' => array(
           'label' => 'above',
@@ -2543,7 +3055,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '31',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -2552,7 +3064,7 @@ function deims_data_set_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '4',
+          'weight' => '2',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -2635,17 +3147,17 @@ function deims_data_set_field_default_fields() {
           'type' => 'date_bdp_temporalCoverage',
           'weight' => '18',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'date',
-          'settings' => array(
-            'format_type' => 'long',
-            'fromto' => 'both',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-          ),
-          'type' => 'date_default',
+          'settings' => array(),
+          'type' => 'date_plain',
           'weight' => '14',
         ),
         'eml' => array(
@@ -2671,13 +3183,13 @@ function deims_data_set_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '19',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -2719,6 +3231,9 @@ function deims_data_set_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_purpose',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -2751,6 +3266,12 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '7',
         ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '17',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
@@ -2782,16 +3303,17 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '32',
         ),
         'teaser' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '6',
+          'weight' => '10',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_purpose',
       'label' => 'Purpose',
@@ -2809,6 +3331,7 @@ function deims_data_set_field_default_fields() {
         'type' => 'text_textarea',
         'weight' => '5',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -2820,6 +3343,9 @@ function deims_data_set_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_quality_assurance',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -2850,6 +3376,13 @@ function deims_data_set_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_plain',
+          'weight' => '13',
+        ),
+        'datasetspanels' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
           'weight' => '13',
         ),
         'default' => array(
@@ -2883,16 +3416,17 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '15',
+          'weight' => '34',
         ),
         'teaser' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '10',
+          'weight' => '15',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_quality_assurance',
       'label' => 'Quality Assurance',
@@ -2910,6 +3444,7 @@ function deims_data_set_field_default_fields() {
         'type' => 'text_textarea',
         'weight' => '59',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -2963,12 +3498,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'datasetspanels' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '6',
+        ),
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '11',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2986,15 +3528,16 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '21',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_reds_searcher_keywords',
       'label' => 'Researcher\'s Keywords',
@@ -3004,20 +3547,9 @@ function deims_data_set_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'term_reference_tree',
-        'settings' => array(
-          'cascading_selection' => 0,
-          'filter_view' => '',
-          'leaves_only' => 0,
-          'max_depth' => '',
-          'parent_term_id' => '',
-          'search' => 0,
-          'select_parents' => 1,
-          'start_minimized' => 1,
-          'token_display' => '',
-          'track_list' => 0,
-        ),
-        'type' => 'term_reference_tree',
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
         'weight' => '5',
       ),
       'workbench_access_field' => 0,
@@ -3067,12 +3599,19 @@ function deims_data_set_field_default_fields() {
           'type' => 'bdp_onlineUrl',
           'weight' => '3',
         ),
-        'default' => array(
+        'datasetspanels' => array(
           'label' => 'inline',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '12',
+          'weight' => '6',
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_label',
+          'weight' => '9',
         ),
         'eml' => array(
           'label' => 'above',
@@ -3097,14 +3636,14 @@ function deims_data_set_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '21',
+          'weight' => '40',
         ),
         'teaser' => array(
           'label' => 'inline',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'entity_type' => 'node',
@@ -3112,6 +3651,7 @@ function deims_data_set_field_default_fields() {
       'label' => 'Related links',
       'required' => 0,
       'settings' => array(
+        'absolute_url' => 1,
         'attributes' => array(
           'class' => '',
           'configurable_title' => 0,
@@ -3125,6 +3665,7 @@ function deims_data_set_field_default_fields() {
         'enable_tokens' => 0,
         'rel_remove' => 'default',
         'title' => 'optional',
+        'title_label_use_field_label' => FALSE,
         'title_maxlength' => '128',
         'title_value' => '',
         'url' => 0,
@@ -3149,6 +3690,9 @@ function deims_data_set_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_related_publications',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'node' => array(
           'columns' => array(
@@ -3165,11 +3709,12 @@ function deims_data_set_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
+        'delete_on_parent_delete' => '',
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
             'views-select-list' => array(
-              'status' => 0,
+              'status' => 1,
             ),
           ),
           'sort' => array(
@@ -3200,14 +3745,23 @@ function deims_data_set_field_default_fields() {
           'type' => 'entityreference_bdp_element',
           'weight' => '1',
         ),
-        'default' => array(
+        'datasetspanels' => array(
           'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => 0,
           ),
           'type' => 'entityreference_label',
-          'weight' => '11',
+          'weight' => '4',
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => 1,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => '8',
         ),
         'eml' => array(
           'label' => 'above',
@@ -3234,7 +3788,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '20',
+          'weight' => '39',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -3243,7 +3797,7 @@ function deims_data_set_field_default_fields() {
             'link' => 0,
           ),
           'type' => 'entityreference_label',
-          'weight' => '4',
+          'weight' => '5',
         ),
       ),
       'entity_type' => 'node',
@@ -3332,14 +3886,23 @@ function deims_data_set_field_default_fields() {
           'type' => 'entityreference_bdp_element',
           'weight' => '5',
         ),
-        'default' => array(
+        'datasetspanels' => array(
           'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => '13',
+          'weight' => '5',
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => 1,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => '10',
         ),
         'eml' => array(
           'label' => 'above',
@@ -3373,7 +3936,7 @@ function deims_data_set_field_default_fields() {
             'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -3382,7 +3945,7 @@ function deims_data_set_field_default_fields() {
             'link' => 0,
           ),
           'type' => 'entityreference_label',
-          'weight' => '6',
+          'weight' => '9',
         ),
       ),
       'ds_extras_field_template' => '',
@@ -3416,6 +3979,9 @@ function deims_data_set_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_short_name',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -3450,12 +4016,18 @@ function deims_data_set_field_default_fields() {
           'type' => 'text_plain',
           'weight' => '9',
         ),
+        'datasetspanels' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
+        ),
         'default' => array(
           'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '8',
+          'weight' => '3',
         ),
         'eml' => array(
           'label' => 'above',
@@ -3480,16 +4052,17 @@ function deims_data_set_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '26',
+          'weight' => '41',
         ),
         'teaser' => array(
           'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '5',
+          'weight' => '8',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_short_name',
       'label' => 'Short name',
@@ -3505,14 +4078,16 @@ function deims_data_set_field_default_fields() {
           'size' => '40',
         ),
         'type' => 'text_textfield',
-        'weight' => '2',
+        'weight' => 0,
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('2006 Proposal Classification');
+  t('2015 Data Product Category');
   t('A short name is usually the name used to refer in short to your dataset. Example: meteo_2010');
   t('Abstract');
   t('Additional Project roles');
@@ -3524,6 +4099,7 @@ function deims_data_set_field_default_fields() {
   t('Data set ID');
   t('Data sources');
   t('Date Range');
+  t('Duration');
   t('EML Link');
   t('EML hash');
   t('EML is valid');
@@ -3531,10 +4107,11 @@ function deims_data_set_field_default_fields() {
   t('Explain here the purpose of your dat aset - for example, the goals sought with the collection of your data.');
   t('Information about the instruments used to gather data.');
   t('Instrumentation');
-  t('Keywords');
+  t('LTER Keywords');
   t('Maintenance');
   t('Metadata provider');
   t('Methods');
+  t('Numeric Data Set ID');
   t('Owner/Creator');
   t('Program');
   t('Publication Date');

@@ -49,3 +49,325 @@ function deims_data_set_node_info() {
   );
   return $items;
 }
+
+/**
+ * Implements hook_rdf_default_mappings().
+ */
+function deims_data_set_rdf_default_mappings() {
+  $schemaorg = array();
+
+  // Exported RDF mapping: data_set
+  $schemaorg['node']['data_set'] = array(
+    'rdftype' => array(
+      0 => 'schema:Dataset',
+      1 => 'sioc:Item',
+      2 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'schema:name',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'schema:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'field_short_name' => array(
+      'predicates' => array(
+        0 => 'schema:alternateName',
+      ),
+    ),
+    'url' => array(
+      'predicates' => array(
+        0 => 'schema:url',
+      ),
+      'type' => 'rel',
+    ),
+    'field_abstract' => array(
+      'predicates' => array(
+        0 => 'schema:about',
+      ),
+    ),
+    'field_purpose' => array(
+      'predicates' => array(
+        0 => 'schema:purpose',
+      ),
+    ),
+    'field_person_creator' => array(
+      'predicates' => array(
+        0 => 'schema:creator',
+      ),
+    ),
+    'field_person_contact' => array(
+      'predicates' => array(
+        0 => 'schema:contactPoint',
+      ),
+    ),
+    'field_person_publisher' => array(
+      'predicates' => array(
+        0 => 'schema:publisher',
+      ),
+    ),
+    'field_core_areas' => array(
+      'predicates' => array(
+        0 => 'schema:keywords',
+      ),
+      'type' => 'rel',
+    ),
+    'field_keywords' => array(
+      'predicates' => array(
+        0 => 'schema:keywords',
+      ),
+      'type' => 'rel',
+    ),
+    'field_reds_searcher_keywords' => array(
+      'predicates' => array(
+        0 => 'schema:keywords',
+      ),
+      'type' => 'rel',
+    ),
+    'field_dataset_2015category' => array(
+      'predicates' => array(
+        0 => 'schema:keywords',
+      ),
+      'type' => 'rel',
+    ),
+    'field_publication_date' => array(
+      'predicates' => array(
+        0 => 'schema:datePublished',
+      ),
+    ),
+    'field_date_range' => array(
+      'predicates' => array(
+        0 => 'schema:temporal',
+      ),
+    ),
+    'field_related_sites' => array(
+      'predicates' => array(
+        0 => 'schema:spatial',
+      ),
+    ),
+  );
+
+  // Exported RDF mapping: core_areas
+  $schemaorg['taxonomy_term']['core_areas'] = array(
+    'rdftype' => array(
+      0 => 'skos:Concept',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'rdfs:label',
+        1 => 'skos:prefLabel',
+      ),
+    ),
+    'description' => array(
+      'predicates' => array(
+        0 => 'skos:definition',
+      ),
+    ),
+    'vid' => array(
+      'predicates' => array(
+        0 => 'skos:inScheme',
+      ),
+      'type' => 'rel',
+    ),
+    'parent' => array(
+      'predicates' => array(
+        0 => 'skos:broader',
+      ),
+      'type' => 'rel',
+    ),
+  );
+
+  // Exported RDF mapping: data_sets_vocabulary_v
+  $schemaorg['taxonomy_term']['data_sets_vocabulary_v'] = array(
+    'rdftype' => array(
+      0 => 'skos:Concept',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'rdfs:label',
+        1 => 'skos:prefLabel',
+      ),
+    ),
+    'description' => array(
+      'predicates' => array(
+        0 => 'skos:definition',
+      ),
+    ),
+    'vid' => array(
+      'predicates' => array(
+        0 => 'skos:inScheme',
+      ),
+      'type' => 'rel',
+    ),
+    'parent' => array(
+      'predicates' => array(
+        0 => 'skos:broader',
+      ),
+      'type' => 'rel',
+    ),
+  );
+
+  // Exported RDF mapping: lter_controlled_vocabulary
+  $schemaorg['taxonomy_term']['lter_controlled_vocabulary'] = array(
+    'rdftype' => array(
+      0 => 'skos:Concept',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'rdfs:label',
+        1 => 'skos:prefLabel',
+      ),
+    ),
+    'description' => array(
+      'predicates' => array(
+        0 => 'skos:definition',
+      ),
+    ),
+    'vid' => array(
+      'predicates' => array(
+        0 => 'skos:inScheme',
+      ),
+      'type' => 'rel',
+    ),
+    'parent' => array(
+      'predicates' => array(
+        0 => 'skos:broader',
+      ),
+      'type' => 'rel',
+    ),
+  );
+
+  // Exported RDF mapping: section
+  $schemaorg['taxonomy_term']['section'] = array(
+    'rdftype' => array(
+      0 => 'skos:Concept',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'rdfs:label',
+        1 => 'skos:prefLabel',
+      ),
+    ),
+    'description' => array(
+      'predicates' => array(
+        0 => 'skos:definition',
+      ),
+    ),
+    'vid' => array(
+      'predicates' => array(
+        0 => 'skos:inScheme',
+      ),
+      'type' => 'rel',
+    ),
+    'parent' => array(
+      'predicates' => array(
+        0 => 'skos:broader',
+      ),
+      'type' => 'rel',
+    ),
+  );
+
+  // Exported RDF mapping: station_keywords
+  $schemaorg['taxonomy_term']['station_keywords'] = array(
+    'rdftype' => array(
+      0 => 'skos:Concept',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'rdfs:label',
+        1 => 'skos:prefLabel',
+      ),
+    ),
+    'description' => array(
+      'predicates' => array(
+        0 => 'skos:definition',
+      ),
+    ),
+    'vid' => array(
+      'predicates' => array(
+        0 => 'skos:inScheme',
+      ),
+      'type' => 'rel',
+    ),
+    'parent' => array(
+      'predicates' => array(
+        0 => 'skos:broader',
+      ),
+      'type' => 'rel',
+    ),
+  );
+
+  // Exported RDF mapping: tags
+  $schemaorg['taxonomy_term']['tags'] = array(
+    'rdftype' => array(
+      0 => 'skos:Concept',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'rdfs:label',
+        1 => 'skos:prefLabel',
+      ),
+    ),
+    'description' => array(
+      'predicates' => array(
+        0 => 'skos:definition',
+      ),
+    ),
+    'vid' => array(
+      'predicates' => array(
+        0 => 'skos:inScheme',
+      ),
+      'type' => 'rel',
+    ),
+    'parent' => array(
+      'predicates' => array(
+        0 => 'skos:broader',
+      ),
+      'type' => 'rel',
+    ),
+  );
+
+  return $schemaorg;
+}
